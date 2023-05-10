@@ -26,3 +26,4 @@ player.setCurrentTime(getItem.localStorageTimePlayedKey).then(function(seconds) 
             break;
     }
 });
+
