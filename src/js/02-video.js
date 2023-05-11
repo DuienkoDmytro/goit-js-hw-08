@@ -4,13 +4,13 @@ const iframe = document.querySelector("iframe");
 
 
 const onPlay = function(data) {
-    // data is an object containing properties specific to that event
+    localStorage.setItem(localStorageTimePlayedKey, data.seconds);
+    console.log(data);
 };
 const localStorageTimePlayedKey = "videoplayer-current-time";
 player.on('timeupdate', onPlay);
 
 
-const localStorageTimePlayedKey = "videoplayer-current-time";
 
 
 player.setCurrentTime(getItem.localStorageTimePlayedKey).then(function(seconds) {
@@ -26,4 +26,3 @@ player.setCurrentTime(getItem.localStorageTimePlayedKey).then(function(seconds) 
             break;
     }
 });
-
