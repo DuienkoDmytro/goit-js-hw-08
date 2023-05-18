@@ -22,19 +22,7 @@ const liPhoto = galleryItems.map((galleryItem) => `<li class="gallery__item">
 galleryItem.insertAdjacentHTML("afterbegin", liPhoto);
 
 
-// console.log(galleryItems);
+const lightbox = new SimpleLightbox('.gallery__link', { captionDelay: "250", captionsData: "alt"});
 
-galleryItem.addEventListener("click", onImg);
-
-function onImg(e) {
-  e.preventDefault();
-
-  const isGalleryImage = e.target.classList.contains("gallery__image");
- if (!isGalleryImage ) {
-   return
-  };
-  
-  const lightbox = new SimpleLightbox('.gallery__link', { captionDelay: "250", captionsData: "alt"});
-}
 
 console.log(galleryItems);
