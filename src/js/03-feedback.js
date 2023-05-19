@@ -30,6 +30,7 @@ function LocalStorageData() {
   {
       email.value = " ";
     message.value = " ";
+    
   }
 
 };
@@ -46,7 +47,7 @@ function validateForm() {
 
 function onSubmitForm(e) {
   validateForm();
-  console.log(enteredData);
+  // console.log(enteredData);
   e.preventDefault();
   e.currentTarget.reset();
   localStorage.removeItem(KEY);
