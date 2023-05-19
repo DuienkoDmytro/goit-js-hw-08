@@ -23,23 +23,31 @@ function onInputForm(e) {
 function LocalStorageData() {  
  
   if (data) {
-    email.value= data.email||" ";
-    message.value = data.message||" ";
+    email.value = data.email || " ";
+    message.value = data.message || " ";
   }
   else
   {
-    email.value = " ";
+      email.value = " ";
     message.value = " ";
   }
 
 };
 
-LocalStorageData ();
+LocalStorageData();
+
+
+function validateForm() {  
+  if (email.value === ""||message.value === "") {
+    alert("All fields must be filled out");
+    return;
+     }
+}
+
 function onSubmitForm(e) {
-  
-  console.log(data);
+  validateForm();
+  console.log(enteredData);
   e.preventDefault();
   e.currentTarget.reset();
   localStorage.removeItem(KEY);
 };
-
