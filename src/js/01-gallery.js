@@ -4,8 +4,6 @@ import { galleryItems } from './gallery-items';
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-
-
 const galleryItem = document.querySelector(".gallery");
 
 const liPhoto = galleryItems.map((galleryItem) => `<li class="gallery__item">
@@ -18,11 +16,7 @@ const liPhoto = galleryItems.map((galleryItem) => `<li class="gallery__item">
   </a>
 </li>`).join("");
 
-
 galleryItem.insertAdjacentHTML("afterbegin", liPhoto);
-
 
 const lightbox = new SimpleLightbox('.gallery__link', { captionDelay: "250", captionsData: "alt"});
 
-
-console.log(galleryItems);
