@@ -6,7 +6,7 @@ const feedBackForm = document.querySelector('.feedback-form');
 const data = JSON.parse(localStorage.getItem(KEY));
  const email = document.querySelector('.feedback-form input');
   const message = document.querySelector('.feedback-form textarea');
-const enteredData = {};
+let enteredData = {};
 
 
 feedBackForm.addEventListener('input', throttle(onInputForm, 500));
@@ -38,5 +38,6 @@ function onSubmitForm(e) {
       e.currentTarget.reset();
       localStorage.removeItem(KEY);
       console.log(enteredData);
+      enteredData = {};
   }  
 };
